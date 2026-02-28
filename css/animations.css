@@ -1,0 +1,381 @@
+<<<<<<< HEAD
+@keyframes fleche_anim {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes apparition_nav_texte {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes apparition_nav_gauche {
+    0% {
+        transform: scale(0.7);
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
+
+@keyframes apparition_h2 {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes apparition_p {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes apparition_boutons {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fleche_disparait {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-30px);
+        display: none;
+    }
+}
+
+@keyframes slider_texte {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    15% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-30px);
+    }
+
+    35% {
+        transform: translateY(-30px);
+    }
+
+    40% {
+        transform: translateY(-60px);
+    }
+
+    55% {
+        transform: translateY(-60px);
+    }
+
+    60% {
+        transform: translateY(-90px);
+    }
+
+    75% {
+        transform: translateY(-90px);
+    }
+
+    80% {
+        transform: translateY(-120px);
+    }
+
+    95% {
+        transform: translateY(-120px);
+    }
+
+    100% {
+        transform: translateY(-150px);
+    }
+}
+
+@keyframes apparition_chat {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes decale_icone_gauche {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes decale_icone_droite {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes bulle_gauche_disparait {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* @keyframes test {
+    from {
+        transform: translateY(30px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.test {
+    animation: test 1s ease-out;
+} */
+
+
+=======
+@keyframes fleche_anim {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes apparition_nav_texte {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes apparition_nav_gauche {
+    0% {
+        transform: scale(0.7);
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
+
+@keyframes apparition_h2 {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes apparition_p {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes apparition_boutons {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fleche_disparait {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-30px);
+        display: none;
+    }
+}
+
+@keyframes slider_texte {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    15% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-30px);
+    }
+
+    35% {
+        transform: translateY(-30px);
+    }
+
+    40% {
+        transform: translateY(-60px);
+    }
+
+    55% {
+        transform: translateY(-60px);
+    }
+
+    60% {
+        transform: translateY(-90px);
+    }
+
+    75% {
+        transform: translateY(-90px);
+    }
+
+    80% {
+        transform: translateY(-120px);
+    }
+
+    95% {
+        transform: translateY(-120px);
+    }
+
+    100% {
+        transform: translateY(-150px);
+    }
+}
+
+@keyframes apparition_chat {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes decale_icone_gauche {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes decale_icone_droite {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes bulle_gauche_disparait {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* @keyframes test {
+    from {
+        transform: translateY(30px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.test {
+    animation: test 1s ease-out;
+} */
+
+
+>>>>>>> ebe4cb9 (fix img directories)

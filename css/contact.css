@@ -1,0 +1,167 @@
+<<<<<<< HEAD
+.formulaire {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 60px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 
+        0 30px 80px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.formulaire label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+    letter-spacing: 1px;
+}
+
+.formulaire input,
+.formulaire textarea {
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    color: white;
+    font-size: 15px;
+    transition: all 0.35s ease;
+}
+
+.formulaire input::placeholder,
+.formulaire textarea::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.formulaire input:focus,
+.formulaire textarea:focus {
+    outline: none;
+    border: 1px solid var(--couleur_principale);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow:
+        0 0 0 4px rgba(107, 105, 232, 0.15),
+        0 10px 30px rgba(107, 105, 232, 0.15);
+}
+
+.formulaire textarea {
+    height: 180px;
+    resize: none;
+}
+
+.formulaire .boutons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.formulaire button {
+    position: relative;
+    font-size: 15px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.4s ease;
+    box-shadow: 
+        0 15px 40px rgba(107, 105, 232, 0.45);    
+}
+
+.formulaire button:hover {
+    transform: translateY(-4.5px);
+    box-shadow: 
+        0 20px 50px black;
+}
+=======
+.formulaire {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 60px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 
+        0 30px 80px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.formulaire label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+    letter-spacing: 1px;
+}
+
+.formulaire input,
+.formulaire textarea {
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    color: white;
+    font-size: 15px;
+    transition: all 0.35s ease;
+}
+
+.formulaire input::placeholder,
+.formulaire textarea::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.formulaire input:focus,
+.formulaire textarea:focus {
+    outline: none;
+    border: 1px solid var(--couleur_principale);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow:
+        0 0 0 4px rgba(107, 105, 232, 0.15),
+        0 10px 30px rgba(107, 105, 232, 0.15);
+}
+
+.formulaire textarea {
+    height: 180px;
+    resize: none;
+}
+
+.formulaire .boutons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.formulaire button {
+    position: relative;
+    font-size: 15px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.4s ease;
+    box-shadow: 
+        0 15px 40px rgba(107, 105, 232, 0.45);    
+}
+
+.formulaire button:hover {
+    transform: translateY(-4.5px);
+    box-shadow: 
+        0 20px 50px black;
+}
+>>>>>>> ebe4cb9 (fix img directories)

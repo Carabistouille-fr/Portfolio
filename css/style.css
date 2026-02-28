@@ -1,0 +1,152 @@
+<<<<<<< HEAD
+:root {
+    --couleur_principale: #6b69e8;
+    --couleur_background: #141826;
+    --couleur_background_plus_clair: #171b2d;
+    --blanc: #f4f4f4;
+    --blanc_gris: #6d727f;
+    --noir: #111827;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--couleur_background);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blanc);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--couleur_principale);
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+body {
+    color: var(--blanc);
+    background-color: var(--couleur_background);
+    font-family: 'Poppins';
+    font-size: 18px;
+    overflow-x: hidden;
+    /* user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; */
+}
+
+body::selection {
+    background: var(--couleur_principale);
+}
+
+/* FOOTER */
+
+.trait_footer {
+    height: 2px;
+    width: 60%;
+    margin: 0 auto;
+    background: var(--blanc_gris);
+    margin-bottom: 40px;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+footer a {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+    color: var(--blanc);
+=======
+:root {
+    --couleur_principale: #6b69e8;
+    --couleur_background: #141826;
+    --couleur_background_plus_clair: #171b2d;
+    --blanc: #f4f4f4;
+    --blanc_gris: #6d727f;
+    --noir: #111827;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--couleur_background);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blanc);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--couleur_principale);
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+body {
+    color: var(--blanc);
+    background-color: var(--couleur_background);
+    font-family: 'Poppins';
+    font-size: 18px;
+    overflow-x: hidden;
+    /* user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; */
+}
+
+body::selection {
+    background: var(--couleur_principale);
+}
+
+/* FOOTER */
+
+.trait_footer {
+    height: 2px;
+    width: 60%;
+    margin: 0 auto;
+    background: var(--blanc_gris);
+    margin-bottom: 40px;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+footer a {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+    color: var(--blanc);
+>>>>>>> ebe4cb9 (fix img directories)
+}

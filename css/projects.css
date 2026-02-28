@@ -1,0 +1,468 @@
+<<<<<<< HEAD
+#projects {
+    position: relative;
+    z-index: 2;
+    background: var(--couleur_background_plus_clair);
+}
+
+.projets {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* PLACE DE IMG */
+
+.description_au_survol {
+    position: relative;
+    display: inline-block;
+}
+
+.bloc_projet img {
+    position: relative;
+    height: 275px;
+    width: 525px;
+    border-radius: 8px;
+    object-fit: cover;
+    z-index: -1;
+    transition: transform .25s ease-out;
+}
+
+.bloc_image {
+    position: relative;
+}
+
+.fond_image {
+    height: 275px;
+    width: 525px;
+    border-radius: 8px;
+    background-color: transparent;
+    overflow: hidden;
+    transition: background-color .4s ease-out;
+}
+
+.bloc_image p {
+    position: absolute;
+    top: 0;
+    margin: 40px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+}
+
+.bloc_image:hover p {
+    opacity: 1;
+}
+
+.bloc_image:hover .fond_image {
+    background-color: var(--couleur_principale);
+}
+
+.bloc_image:hover img {
+    transform: scale(1.15);
+}
+
+/* TEXTE EN DESSOUS DE IMG */
+
+.bloc_projet h5 {
+    font-size: 20px;
+}
+
+.bloc_projet>p {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--blanc_gris);
+}
+
+.bloc_projet a {
+    position: relative;
+    top: 4px;
+    font-size: 17px;
+    color: var(--couleur_principale);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bloc_projet a::selection,
+.bloc_projet p::selection {
+    color: var(--blanc);
+}
+
+/* SOULIGNAGE DYNAMIQUE 2 */
+
+.bloc_projet a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 100%;
+    background-color: var(--couleur_principale);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .4s ease;
+}
+
+.bloc_projet a:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+
+/* MODAL */
+
+.project_modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+    z-index: 1000;
+}
+
+.project_modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.project_modal.closing {
+    opacity: 0;
+}
+
+.modal_content {
+    position: relative;
+    width: 80%;
+    max-width: 1100px;
+}
+
+.close_modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+}
+
+.modal_carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.modal_track {
+    display: flex;
+    transition: transform .6s ease;
+    touch-action: pan-y;
+}
+
+.modal_track img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.modal_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 28px;
+    padding: 10px 22px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.modal_btn:active {
+    transform: translateY(-50%) scale(0.92);
+}
+
+.modal_btn.prev {
+    left: 20px;
+}
+
+.modal_btn.next {
+    right: 20px;
+}
+
+.modal_btn.prev span {
+    position: relative;
+    right: 1px;
+}
+
+.modal_btn.next span {
+    position: relative;
+    left: 1px;
+}
+
+.modal_counter {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.modal_image_title {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 15px;
+    letter-spacing: 1px;
+=======
+#projects {
+    position: relative;
+    z-index: 2;
+    background: var(--couleur_background_plus_clair);
+}
+
+.projets {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* PLACE DE IMG */
+
+.description_au_survol {
+    position: relative;
+    display: inline-block;
+}
+
+.bloc_projet img {
+    position: relative;
+    height: 275px;
+    width: 525px;
+    border-radius: 8px;
+    object-fit: cover;
+    z-index: -1;
+    transition: transform .25s ease-out;
+}
+
+.bloc_image {
+    position: relative;
+}
+
+.fond_image {
+    height: 275px;
+    width: 525px;
+    border-radius: 8px;
+    background-color: transparent;
+    overflow: hidden;
+    transition: background-color .4s ease-out;
+}
+
+.bloc_image p {
+    position: absolute;
+    top: 0;
+    margin: 40px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+}
+
+.bloc_image:hover p {
+    opacity: 1;
+}
+
+.bloc_image:hover .fond_image {
+    background-color: var(--couleur_principale);
+}
+
+.bloc_image:hover img {
+    transform: scale(1.15);
+}
+
+/* TEXTE EN DESSOUS DE IMG */
+
+.bloc_projet h5 {
+    font-size: 20px;
+}
+
+.bloc_projet>p {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--blanc_gris);
+}
+
+.bloc_projet a {
+    position: relative;
+    top: 4px;
+    font-size: 17px;
+    color: var(--couleur_principale);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bloc_projet a::selection,
+.bloc_projet p::selection {
+    color: var(--blanc);
+}
+
+/* SOULIGNAGE DYNAMIQUE 2 */
+
+.bloc_projet a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 100%;
+    background-color: var(--couleur_principale);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .4s ease;
+}
+
+.bloc_projet a:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+
+/* MODAL */
+
+.project_modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+    z-index: 1000;
+}
+
+.project_modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.project_modal.closing {
+    opacity: 0;
+}
+
+.modal_content {
+    position: relative;
+    width: 80%;
+    max-width: 1100px;
+}
+
+.close_modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+}
+
+.modal_carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.modal_track {
+    display: flex;
+    transition: transform .6s ease;
+    touch-action: pan-y;
+}
+
+.modal_track img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.modal_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 28px;
+    padding: 10px 22px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.modal_btn:active {
+    transform: translateY(-50%) scale(0.92);
+}
+
+.modal_btn.prev {
+    left: 20px;
+}
+
+.modal_btn.next {
+    right: 20px;
+}
+
+.modal_btn.prev span {
+    position: relative;
+    right: 1px;
+}
+
+.modal_btn.next span {
+    position: relative;
+    left: 1px;
+}
+
+.modal_counter {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.modal_image_title {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 15px;
+    letter-spacing: 1px;
+>>>>>>> ebe4cb9 (fix img directories)
+}

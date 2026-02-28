@@ -1,0 +1,154 @@
+<<<<<<< HEAD
+/* AU REPOS */
+
+.bulle_chat {
+    position: fixed;
+    display: flex;
+    bottom: 35px;
+    right: 25px;
+    animation: apparition_chat .8s ease-out forwards;
+    z-index: 999;
+}
+
+.bloc_gauche_coucou {
+    display: flex;
+    align-self: center;
+    width: 225px;
+    height: 50px;
+    background: var(--blanc);
+    margin-right: 15px;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 0 9px 5px black;
+    transition: opacity .8s ease-in;
+}
+
+.bloc_gauche_coucou p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+
+.bloc_gauche_coucou span {
+    font-size: 22px;
+}
+
+.bulle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    background: var(--couleur_principale);
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .1s ease-out;
+}
+
+.bulle:hover {
+    transform: scale(1.1);
+}
+
+.bulle i {
+    position: relative;
+    font-size: 25px;
+    left: 9px;
+    top: 2px;
+    margin-left: 30px;
+}
+
+
+.anim_bloc_gauche {
+    animation: bulle_gauche_disparait .8s ease-in;
+}
+
+.decale_icone_gauche {
+    animation: decale_icone_gauche .6s ease-in-out;
+}
+
+.decale_icone_droite {
+    animation: decale_icone_droite .6s ease-in-out;
+}
+
+=======
+/* AU REPOS */
+
+.bulle_chat {
+    position: fixed;
+    display: flex;
+    bottom: 35px;
+    right: 25px;
+    animation: apparition_chat .8s ease-out forwards;
+    z-index: 999;
+}
+
+.bloc_gauche_coucou {
+    display: flex;
+    align-self: center;
+    width: 225px;
+    height: 50px;
+    background: var(--blanc);
+    margin-right: 15px;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 0 9px 5px black;
+    transition: opacity .8s ease-in;
+}
+
+.bloc_gauche_coucou p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+
+.bloc_gauche_coucou span {
+    font-size: 22px;
+}
+
+.bulle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    background: var(--couleur_principale);
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .1s ease-out;
+}
+
+.bulle:hover {
+    transform: scale(1.1);
+}
+
+.bulle i {
+    position: relative;
+    font-size: 25px;
+    left: 9px;
+    top: 2px;
+    margin-left: 30px;
+}
+
+
+.anim_bloc_gauche {
+    animation: bulle_gauche_disparait .8s ease-in;
+}
+
+.decale_icone_gauche {
+    animation: decale_icone_gauche .6s ease-in-out;
+}
+
+.decale_icone_droite {
+    animation: decale_icone_droite .6s ease-in-out;
+}
+
+>>>>>>> ebe4cb9 (fix img directories)
+/* EN ACTION */
