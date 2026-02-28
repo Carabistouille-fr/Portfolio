@@ -26,7 +26,7 @@
     border-radius: 8px;
     object-fit: cover;
     z-index: -1;
-    transition: transform .25s ease-out;
+    transition: all .25s ease-out;
 }
 
 .bloc_image {
@@ -39,7 +39,7 @@
     border-radius: 8px;
     background-color: transparent;
     overflow: hidden;
-    transition: background-color .4s ease-out;
+    /* transition: background-color .4s ease-out; */
 }
 
 .bloc_image p {
@@ -48,19 +48,20 @@
     margin: 40px;
     text-align: center;
     opacity: 0;
-    transition: opacity .3s ease-out;
+    transition: opacity .2s ease-out;
 }
 
 .bloc_image:hover p {
     opacity: 1;
 }
 
-.bloc_image:hover .fond_image {
-    background-color: var(--couleur_principale);
-}
+/* .bloc_image:hover .fond_image {
+    background-color: #6b69e8e3;
+} */
 
 .bloc_image:hover img {
-    transform: scale(1.15);
+    transform: scale(1.1);
+    filter: blur(18px);
 }
 
 /* TEXTE EN DESSOUS DE IMG */
