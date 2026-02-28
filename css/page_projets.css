@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .tete_presentation_projet {
     background-color: var(--couleur_background);
 }
@@ -57,64 +56,4 @@
 
 .bloc_retour span {
     margin-left: 4px;
-=======
-.tete_presentation_projet {
-    background-color: var(--couleur_background);
-}
-
-.bloc2 {
-    background-color: var(--couleur_background_plus_clair);
-}
-
-.tete_presentation_projet {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.tete_presentation_projet h1 {
-    font-size: 48px;
-    text-align: center;
-    margin-top: 110px;
-}
-
-.tete_presentation_projet p {
-    width: 950px;
-    text-align: center;
-    margin-top: 40px;
-}
-
-.container_retour {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 100px;
-}
-
-.bloc_retour {
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: inline-block;
-    padding: 15px 35px;
-    background: var(--couleur_principale);
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform .3s ease-out;
-    box-shadow: 1px 6px 18px 0px black;
-}
-
-.bloc_retour:hover {
-    transform: translateY(-5px);
-}
-
-.bloc_retour a {
-    color: var(--blanc);
-    text-decoration: none;
-}
-
-.bloc_retour span {
-    margin-left: 4px;
->>>>>>> ebe4cb9 (fix img directories)
 }
