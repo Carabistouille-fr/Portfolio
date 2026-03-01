@@ -4,6 +4,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <title>Portfolio | Léo MAGNIEN</title>
+        <meta
+            name="description"
+            content="Portfolio de Léo MAGNIEN, visitez mon site PORTFOLIO pour en apprendre plus sur moi."
+        />
+
+        <meta name="author" content="Léo MAGNIEN" />
+
+        <meta property="og:title" content="Mon Portfolio | Léo MAGNIEN" />
+        <meta
+            property="og:description"
+            content="Portfolio de Léo MAGNIEN, visitez mon site PORTFOLIO pour en apprendre plus sur moi !"
+        />
+        <meta property="og:type" content="website" />
 
         <link
             rel="icon"
@@ -29,10 +42,10 @@
         <link rel="stylesheet" href="./css/projects.css" />
         <link rel="stylesheet" href="./css/contact.css" />
 
-        <script defer src="./js/form.js"></script>
-        <script defer src="./js/fleche.js"></script>
+        <script defer src="./js/scroll.js"></script>
         <script defer src="./js/bulle_conversation.js"></script>
         <script defer src="./js/modal.js"></script>
+        <script defer src="./js/form.js"></script>
     </head>
 
     <body>
@@ -53,7 +66,7 @@
 
         <section class="hero_banner" id="home">
             <div class="bloc_hero_banner">
-                <h2>Bonsoir ! Je suis <span>MAGNIEN Léo</span></h2>
+                <h2>Bonjour ! Je suis <span>MAGNIEN Léo</span></h2>
                 <div class="phrase">
                     <span>Je</span>
 
@@ -79,14 +92,68 @@
                 </div>
             </div>
 
-            <div class="bulle_chat">
-                <div class="bloc_gauche_coucou">
-                    <p>Discutons ensemble<span>👋</span></p>
+            <!-- ════ WIDGET ════ -->
+            <div class="chat-widget">
+                <div class="chat-toast" id="chatToast" onclick="toggleChat()">
+                    <p>Discutons ensemble <span class="wave">👋</span></p>
                 </div>
-                <div class="bulle_ouverte"></div>
-                <div class="bulle">
-                    <i class="fa-solid fa-message"></i>
-                    <i class="fa-solid fa-x"></i>
+                <div class="chat-btn" id="chatBtn" onclick="toggleChat()">
+                    <!-- Chat icon -->
+                    <svg
+                        class="icon-msg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path
+                            d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                        />
+                    </svg>
+                    <!-- Close icon -->
+                    <svg
+                        class="icon-x"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                    >
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- ════ PANEL ════ -->
+            <div class="chat-panel" id="chatPanel">
+                <div class="panel-header">
+                    <!--
+      Photo de profil :
+      - Avec image : <div class="avatar"><img src="VOTRE_PHOTO.jpg" alt="Alexandre"></div>
+      - Sans image  : <div class="avatar">A</div>
+    -->
+                    <div class="avatar" id="avatarEl">A</div>
+                    <div class="header-info">
+                        <h3>Léo MAGNIEN · Dev &amp; Designer</h3>
+                        <div class="header-status">
+                            <span class="status-dot"></span>
+                            Disponible
+                        </div>
+                    </div>
+                </div>
+
+                <div class="messages" id="messages"></div>
+
+                <div class="questions-bar">
+                    <div class="questions-label">Questions fréquentes</div>
+                    <div class="questions-list" id="questionsList"></div>
                 </div>
             </div>
 
@@ -108,7 +175,7 @@
             </div>
 
             <div class="blocs">
-                <div class="bloc_gauche_me_connaitre">
+                <div class="bloc_gauche_me_connaitre reveal">
                     <h4>Mieux me connaître !</h4>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing
@@ -126,7 +193,7 @@
                     </p>
                 </div>
 
-                <div class="bloc_droite_skills">
+                <div class="bloc_droite_skills reveal">
                     <h4>Mes compétences</h4>
                     <div class="competences_blocs">
                         <div class="competence">HTML</div>
@@ -160,7 +227,7 @@
             </div>
 
             <div class="projets">
-                <div class="bloc_projet">
+                <div class="bloc_projet reveal">
                     <div class="bloc_image description_au_survol">
                         <div class="fond_image">
                             <img
@@ -187,7 +254,7 @@
                         >Voir plus d'images</a
                     >
                 </div>
-                <div class="bloc_projet">
+                <div class="bloc_projet reveal">
                     <div class="bloc_image description_au_survol">
                         <div class="fond_image">
                             <img
@@ -214,7 +281,7 @@
                         >Voir plus d'images</a
                     >
                 </div>
-                <div class="bloc_projet">
+                <div class="bloc_projet reveal">
                     <div class="bloc_image description_au_survol">
                         <div class="fond_image">
                             <img
@@ -274,7 +341,7 @@
                 </p>
             </div>
 
-            <div class="formulaire">
+            <div class="formulaire reveal">
                 <form
                     id="formulaire_contact"
                     action="https://formspree.io/f/mdaljaov"
@@ -319,18 +386,21 @@
 
         <footer>
             <div class="trait_footer"></div>
-            © Copyright 2026 | Par MAGNIEN Léo - Tous droits réservés.
-            <br>
             <a href="mailto:contact@gmail.com">📩 contact@gmail.com</a>
+            <span
+                >© Copyright 2026 | Par MAGNIEN Léo - Tous droits
+                réservés.</span
+            >
         </footer>
     </body>
 </html>
 
-<!-- ANIMATION REVEAL AU FUR ET A MESURE -->
 <!-- FAIRE LE CHAT -->
 <!-- FAIRE LE RESPONSIVE -->
+ <!-- CHANGER NOMS ASSETS -->
 <!-- DEMANDER A CHATGPT DE CHANGER LES NOMS DE CLASS ETC. (ET AJOUTER DES COMS UTILES) -->
- <!-- FAIRE UN CODE PROPRE -->
+<!-- FAIRE UN CODE PROPRE -->
+
 <!-- CHANGER LES PHOTOS -->
 <!-- CHANGER LES LOREM -->
- 
+<!-- ANIMATION REVEAL PEUT ETRE A ADAPTE POUR MEILLEUR POUR LE BLOC 'ME CONNAITRE' -->

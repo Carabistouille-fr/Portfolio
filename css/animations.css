@@ -1,3 +1,14 @@
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @keyframes fleche_anim {
     0% {
         transform: translateY(0);
@@ -131,57 +142,54 @@
     }
 }
 
+/* ════ ANIMATIONS ════ */
 @keyframes apparition_chat {
-    0% {
+    from {
         opacity: 0;
-        transform: scale(0.8);
+        transform: translateY(14px)
     }
 
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes blink {
+
+    0%,
     100% {
-        opacity: 1;
-        transform: scale(1);
+        opacity: 1
+    }
+
+    50% {
+        opacity: .3
     }
 }
 
-@keyframes decale_icone_gauche {
-    from {
-        transform: translateX(0);
-    }
+@keyframes typing {
 
-    to {
-        transform: translateX(-20px);
-    }
-}
-
-@keyframes decale_icone_droite {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(20px);
-    }
-}
-
-@keyframes bulle_gauche_disparait {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
-/* @keyframes test {
-    from {
-        transform: translateY(30px);
-    }
-    to {
+    0%,
+    60%,
+    100% {
         transform: translateY(0);
+        opacity: .4
+    }
+
+    30% {
+        transform: translateY(-5px);
+        opacity: 1
     }
 }
 
-.test {
-    animation: test 1s ease-out;
-} */
+@keyframes msgIn {
+    from {
+        opacity: 0;
+        transform: translateY(7px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
