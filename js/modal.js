@@ -11,13 +11,18 @@ let images = [];
 
 document.querySelectorAll(".open_modal").forEach((bloc) => {
     bloc.addEventListener("click", () => {
-        images = bloc.dataset.images.split(",").map((item) => {
-            const [src, title] = item.split("|");
-            return {
-                src: src.trim(),
-                title: title ? title.trim() : "",
-            };
-        });
+        images = bloc.dataset.images
+            .split(",")
+            .map((item) => item.trim())
+            .filter((item) => item.length > 0)
+            .map((item) => {
+                const pipeIndex = item.indexOf("|");
+                if (pipeIndex === -1) return { src: item, title: "" };
+                return {
+                    src: item.slice(0, pipeIndex).trim(),
+                    title: item.slice(pipeIndex + 1).trim(),
+                };
+            });
 
         modalTrack.innerHTML = "";
         currentIndex = 0;
@@ -26,15 +31,30 @@ document.querySelectorAll(".open_modal").forEach((bloc) => {
             wrapper.style.position = "relative";
             wrapper.style.minWidth = "100%";
 
-            const img = document.createElement("img");
-            img.src = data.src;
-            img.style.width = "100%";
+            const isVideo = /\.(mp4|webm|ogg)$/i.test(data.src);
+            let media;
+
+            if (isVideo) {
+                media = document.createElement("video");
+                media.src = data.src;
+                media.controls = true;
+                media.muted = true;
+                media.autoplay = true;
+                media.loop = true;
+                media.style.width = "100%";
+                media.style.maxHeight = "75vh";
+                media.style.display = "block";
+            } else {
+                media = document.createElement("img");
+                media.src = data.src;
+                media.style.width = "100%";
+            }
 
             const titleEl = document.createElement("div");
             titleEl.textContent = data.title;
             titleEl.classList.add("modal_image_title");
 
-            wrapper.appendChild(img);
+            wrapper.appendChild(media);
             wrapper.appendChild(titleEl);
             modalTrack.appendChild(wrapper);
         });
@@ -48,9 +68,10 @@ document.querySelectorAll(".open_modal").forEach((bloc) => {
 function updateSlide() {
     modalTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-    if (counter) {
-        counter.textContent = `${currentIndex + 1} / ${images.length}`;
-    }
+    const counterText = `${currentIndex + 1} / ${images.length}`;
+    document.querySelectorAll(".modal_counter").forEach((el) => {
+        el.textContent = counterText;
+    });
 
     if (imageCaption) {
         imageCaption.textContent = images[currentIndex]?.title || "";
@@ -68,6 +89,12 @@ prevBtn.addEventListener("click", () => {
 });
 
 function close() {
+    modalTrack.querySelectorAll("video").forEach((v) => {
+        v.pause();
+        v.currentTime = 0;
+    });
+
+    modal.classList.remove("active");
     modal.classList.remove("active");
     modal.classList.add("closing");
     document.body.style.overflow = "";

@@ -47,13 +47,17 @@
     margin-left: 95px;
 }
 
-.bloc_gauche_me_connaitre p {
+.bloc_gauche_me_connaitre .presentation {
     margin-top: 40px;
     margin-left: 95px;
     width: 75%;
-    display: flex;
     text-align: justify;
 }
+
+.presentation p:not(:last-child) {
+    margin-bottom: 30px;
+}
+
 
 .bloc_droite_skills {
     width: 50vw;
@@ -130,11 +134,15 @@
         margin-left: 24px;
     }
 
-    .bloc_gauche_me_connaitre p {
+    .bloc_gauche_me_connaitre .presentation {
         font-size: 15px;
         margin-left: 24px;
         width: calc(100% - 48px);
         margin-top: 20px;
+    }
+
+    .presentation p:not(:last-child) {
+        margin-bottom: 15px;
     }
 
     .bloc_droite_skills {
