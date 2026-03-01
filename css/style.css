@@ -1,10 +1,14 @@
 :root {
+    --blanc: #f4f4f4;
+    --noir: #111827;
+    --blanc_gris: #64748b;
     --couleur_principale: #6b69e8;
     --couleur_background: #141826;
     --couleur_background_plus_clair: #171b2d;
-    --blanc: #f4f4f4;
-    --blanc_gris: #6d727f;
-    --noir: #111827;
+    --blanc_gris: #64748b;
+    --bulle_fond: #192033;
+    --bulle_chat: #1e2a40;
+    --bordure_chat: rgba(255, 255, 255, 0.07);
 }
 
 * {
@@ -42,9 +46,6 @@ body {
     font-family: 'Poppins';
     font-size: 18px;
     overflow-x: hidden;
-    /* user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none; */
 }
 
 body::selection {
@@ -56,6 +57,7 @@ body::selection {
 .trait_footer {
     height: 2px;
     width: 60%;
+    min-width: 400px;
     margin: 0 auto;
     background: var(--blanc_gris);
     margin-bottom: 40px;
@@ -75,4 +77,30 @@ footer a {
     text-decoration: none;
     color: var(--blanc);
     margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .avant_propos {
+        margin-bottom: 50px;
+    }
+
+    .separation_titre {
+        margin-top: 4px;
+    }
+}
+
+@media (max-width: 450px) {
+    .separation_titre {
+        margin-top: 4px;
+    }
 }

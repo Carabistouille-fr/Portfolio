@@ -1,4 +1,4 @@
-<!doctype html>
+f<!doctype html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
@@ -22,7 +22,7 @@
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="./assets/img_projects/pp L.png"
+            href="./assets/img_projects/pp_L.png"
         />
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
@@ -43,6 +43,7 @@
         <link rel="stylesheet" href="./css/contact.css" />
 
         <script defer src="./js/scroll.js"></script>
+        <script defer src="./js/nav.js"></script>
         <script defer src="./js/bulle_conversation.js"></script>
         <script defer src="./js/modal.js"></script>
         <script defer src="./js/form.js"></script>
@@ -50,10 +51,21 @@
 
     <body>
         <header>
+            <div class="nav-overlay"></div>
             <nav>
                 <div class="bloc_header_gauche">
-                    <img src="./assets/img_projects/pp.jpg" alt="" />
+                    <img src="./assets/img_projects/pp_head.jpg" alt="" />
                     <h1>Léo MAGNIEN</h1>
+                </div>
+                <div
+                    class="burger"
+                    aria-label="Menu"
+                    role="button"
+                    tabindex="0"
+                >
+                    <span class="burger-bar"></span>
+                    <span class="burger-bar"></span>
+                    <span class="burger-bar"></span>
                 </div>
                 <ul>
                     <li><a href="#home">Accueil</a></li>
@@ -75,8 +87,14 @@
                             <b>PROGRAMME</b>
                             <b>CODE</b>
                             <b>DESIGN</b>
-                            <b>CONÇOIT</b>
-                            <b>DÉVELOPPE</b>
+                            <b
+                                >CON<span style="font-size: 19.5px">Ç</span
+                                >OIT</b
+                            >
+                            <b
+                                >D<span style="font-family: helvetica">É</span
+                                >VELOPPE</b
+                            >
                             <b>PROGRAMME</b>
                         </div>
                     </div>
@@ -92,13 +110,11 @@
                 </div>
             </div>
 
-            <!-- ════ WIDGET ════ -->
             <div class="chat-widget">
                 <div class="chat-toast" id="chatToast" onclick="toggleChat()">
                     <p>Discutons ensemble <span class="wave">👋</span></p>
                 </div>
                 <div class="chat-btn" id="chatBtn" onclick="toggleChat()">
-                    <!-- Chat icon -->
                     <svg
                         class="icon-msg"
                         width="22"
@@ -131,14 +147,8 @@
                 </div>
             </div>
 
-            <!-- ════ PANEL ════ -->
             <div class="chat-panel" id="chatPanel">
                 <div class="panel-header">
-                    <!--
-      Photo de profil :
-      - Avec image : <div class="avatar"><img src="VOTRE_PHOTO.jpg" alt="Alexandre"></div>
-      - Sans image  : <div class="avatar">A</div>
-    -->
                     <div class="avatar" id="avatarEl">A</div>
                     <div class="header-info">
                         <h3>Léo MAGNIEN · Dev &amp; Designer</h3>
@@ -231,7 +241,7 @@
                     <div class="bloc_image description_au_survol">
                         <div class="fond_image">
                             <img
-                                src="./assets/img_projects/Aérodynamisme 2.jpg"
+                                src="./assets/img_projects/aerodynamic_car.jpg"
                                 alt=""
                             />
                         </div>
@@ -248,9 +258,9 @@
                     <p>Développement web (projet de fin d'année)</p>
                     <a
                         class="open_modal"
-                        data-images="./assets/img_projects/Aérodynamisme 2.jpg|Ici il faut mettre un titre pour l'image d'en dessous,
-                              ./assets/img_projects/Aérodynamisme 2.jpg|Ici il faut mettre un titre pour l'image d'en dessous,
-                              ./assets/img_projects/Aérodynamisme 2.jpg|Ici il faut mettre un titre pour l'image d'en dessous"
+                        data-images="./assets/img_projects/aerodynamic_car.jpg|Ici il faut mettre un titre pour l'image d'en dessous,
+                              ./assets/img_projects/aerodynamic_car.jpg|Ici il faut mettre un titre pour l'image d'en dessous,
+                              ./assets/img_projects/aerodynamic_car.jpg|Ici il faut mettre un titre pour l'image d'en dessous"
                         >Voir plus d'images</a
                     >
                 </div>
@@ -258,7 +268,7 @@
                     <div class="bloc_image description_au_survol">
                         <div class="fond_image">
                             <img
-                                src="./assets/img_projects/Aérodynamisme 2.jpg"
+                                src="./assets/img_projects/aerodynamic_car.jpg"
                                 alt=""
                             />
                         </div>
@@ -275,9 +285,9 @@
                     <p>Projet programmation jeu vidéo</p>
                     <a
                         class="open_modal"
-                        data-images="./assets/img_projects/Aérodynamisme 2.jpg|Ici il faut mettre un titre pour l'image d'en dessous,
-                              ./assets/img_projects/Aérodynamisme 2.jpg|Ici il faut mettre un titre pour l'image d'en dessous,
-                              ./assets/img_projects/Aérodynamisme 2.jpg|Ici il faut mettre un titre pour l'image d'en dessous"
+                        data-images="./assets/img_projects/aerodynamic_car.jpg|Ici il faut mettre un titre pour l'image d'en dessous,
+                              ./assets/img_projects/aerodynamic_car.jpg|Ici il faut mettre un titre pour l'image d'en dessous,
+                              ./assets/img_projects/aerodynamic_car.jpg|Ici il faut mettre un titre pour l'image d'en dessous"
                         >Voir plus d'images</a
                     >
                 </div>
@@ -285,7 +295,7 @@
                     <div class="bloc_image description_au_survol">
                         <div class="fond_image">
                             <img
-                                src="./assets/img_projects/Aérodynamisme 2.jpg"
+                                src="./assets/img_projects/aerodynamic_car.jpg"
                                 alt=""
                             />
                         </div>
@@ -302,9 +312,9 @@
                     <p>Projet d'ingénieurie</p>
                     <a
                         class="open_modal"
-                        data-images="./assets/img_projects/Aérodynamisme 2.jpg|Ici il faut mettre un titre pour l'image d'en dessous,
-                              ./assets/img_projects/Aérodynamisme 2.jpg|Ici il faut mettre un titre pour l'image d'en dessous,
-                              ./assets/img_projects/Aérodynamisme 2.jpg|Ici il faut mettre un titre pour l'image d'en dessous"
+                        data-images="./assets/img_projects/aerodynamic_car.jpg|Ici il faut mettre un titre pour l'image d'en dessous,
+                              ./assets/img_projects/aerodynamic_car.jpg|Ici il faut mettre un titre pour l'image d'en dessous,
+                              ./assets/img_projects/aerodynamic_car.jpg|Ici il faut mettre un titre pour l'image d'en dessous"
                         >Voir plus d'images</a
                     >
                 </div>
@@ -314,7 +324,6 @@
         <div class="project_modal">
             <div class="modal_content">
                 <span class="close_modal">&times;</span>
-                <div class="modal_counter"></div>
 
                 <div class="modal_carousel">
                     <div class="modal_track"></div>
@@ -325,6 +334,11 @@
                     <button class="modal_btn next">
                         <span>&#10095;</span>
                     </button>
+                </div>
+
+                <div class="modal_footer">
+                    <div class="modal_caption"></div>
+                    <div class="modal_counter"></div>
                 </div>
             </div>
         </div>
@@ -386,7 +400,9 @@
 
         <footer>
             <div class="trait_footer"></div>
-            <a href="mailto:contact@gmail.com">📩 contact@gmail.com</a>
+            <a href="mailto:contact@leo-magnien.fr"
+                >📩 contact@leo-magnien.fr</a
+            >
             <span
                 >© Copyright 2026 | Par MAGNIEN Léo - Tous droits
                 réservés.</span
@@ -394,13 +410,3 @@
         </footer>
     </body>
 </html>
-
-<!-- FAIRE LE CHAT -->
-<!-- FAIRE LE RESPONSIVE -->
- <!-- CHANGER NOMS ASSETS -->
-<!-- DEMANDER A CHATGPT DE CHANGER LES NOMS DE CLASS ETC. (ET AJOUTER DES COMS UTILES) -->
-<!-- FAIRE UN CODE PROPRE -->
-
-<!-- CHANGER LES PHOTOS -->
-<!-- CHANGER LES LOREM -->
-<!-- ANIMATION REVEAL PEUT ETRE A ADAPTE POUR MEILLEUR POUR LE BLOC 'ME CONNAITRE' -->

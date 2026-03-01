@@ -96,53 +96,51 @@
 }
 
 @keyframes slider_texte {
-
     0% {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
 
     15% {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
 
     20% {
-        transform: translateY(-30px);
+        transform: translateY(calc(var(--slide-h, 30px) * -1));
     }
 
     35% {
-        transform: translateY(-30px);
+        transform: translateY(calc(var(--slide-h, 30px) * -1));
     }
 
     40% {
-        transform: translateY(-60px);
+        transform: translateY(calc(var(--slide-h, 30px) * -2));
     }
 
     55% {
-        transform: translateY(-60px);
+        transform: translateY(calc(var(--slide-h, 30px) * -2));
     }
 
     60% {
-        transform: translateY(-90px);
+        transform: translateY(calc(var(--slide-h, 30px) * -3));
     }
 
     75% {
-        transform: translateY(-90px);
+        transform: translateY(calc(var(--slide-h, 30px) * -3));
     }
 
     80% {
-        transform: translateY(-120px);
+        transform: translateY(calc(var(--slide-h, 30px) * -4));
     }
 
     95% {
-        transform: translateY(-120px);
+        transform: translateY(calc(var(--slide-h, 30px) * -4));
     }
 
     100% {
-        transform: translateY(-150px);
+        transform: translateY(calc(var(--slide-h, 30px) * -5));
     }
 }
 
-/* ════ ANIMATIONS ════ */
 @keyframes apparition_chat {
     from {
         opacity: 0;

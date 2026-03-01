@@ -15,7 +15,6 @@
 }
 
 .hero_banner h2 {
-    /* font-size: 52px; */
     font-size: 56px;
     text-align: center;
     animation: apparition_h2 .9s ease-out forwards;
@@ -25,7 +24,6 @@
     position: relative;
     color: var(--couleur_principale);
     text-decoration: none;
-    color: var(--couleur_principale);
     cursor: context-menu;
 }
 
@@ -70,8 +68,6 @@
     animation: apparition_boutons .9s ease-out forwards;
 }
 
-/* FLECHE */
-
 .fleche_descendre {
     position: absolute;
     bottom: 35px;
@@ -84,10 +80,8 @@
 }
 
 .fleche_disparait {
-    animation: fleche_disparait .7s ease-in forwards;
+    animation: fleche_disparait .55s ease-in forwards;
 }
-
-/* SOULIGNAGE DYNAMIQUE */
 
 .hero_banner h2 span::after {
     content: "";
@@ -107,31 +101,173 @@
     transform-origin: left;
 }
 
-/* SLIDER-TEXTE */
-
 .phrase {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
+    flex-wrap: nowrap;
 }
 
 .slider {
-    height: 30px;
+    height: 1.2em;
     overflow: hidden;
-    /* border: red 3px solid; */
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: flex-start;
 }
 
 .slides {
     display: flex;
     flex-direction: column;
+    --slide-h: 1.2em;
     animation: slider_texte 8.5s infinite ease-in-out;
 }
 
 .slides b {
-    position: relative;
-    height: 30px;
+    height: 1.2em;
+    line-height: 1.2em;
     display: flex;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
+}
+
+@media (max-width: 960px) {
+    .hero_banner h2 {
+        font-size: 44px;
+        margin-bottom: 30px;
+        margin-bottom: 50px;
+    }
+
+    .hero_banner {
+        padding: 0 28px;
+    }
+
+    .bloc_hero_banner {
+        top: 0;
+        width: 100%;
+    }
+
+    .bloc_hero_banner .phrase {
+        font-size: 18px;
+        margin-top: 18px;
+        flex-wrap: wrap;
+        gap: 0;
+        justify-content: center;
+        row-gap: 6px;
+        align-items: center;
+    }
+
+    .phrase>span:first-child {
+        gap: 5px;
+    }
+
+    .phrase>span:last-child {
+        font-size: 18px;
+    }
+
+    .slides b {
+        font-size: 18px;
+        margin: 0 10px;
+    }
+
+    .boutons {
+        font-size: 18px;
+        margin-top: 38px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 50px;
+    }
+
+    .boutons>* {
+        margin-left: 0;
+        padding: 13px 15px;
+        font-size: 15px;
+        flex: 1 1 140px;
+        max-width: 180px;
+        text-align: center;
+    }
+
+    .fleche_descendre {
+        font-size: 24px;
+        bottom: 80px;
+    }
+}
+
+@media (max-width: 750px) {
+    .hero_banner h2 {
+        font-size: 38px;
+    }
+
+    .bloc_hero_banner .phrase {
+        font-size: 18px;
+    }
+
+    .phrase>span:first-child {
+        gap: 5px;
+    }
+
+    .phrase>span:last-child {
+        font-size: 18px;
+    }
+
+    .slides b {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    .boutons {
+        margin-top: 60px;
+    }
+
+    .boutons>* {
+        font-size: 15px;
+        padding: 12px 16px;
+        flex: 1 1 120px;
+    }
+
+    .fleche_descendre {
+        bottom: 90px;
+    }
+}
+
+@media (max-width: 650px) {
+    .hero_banner h2 {
+        font-size: 34px;
+    }
+
+    .bloc_hero_banner .phrase {
+        font-size: 18px;
+    }
+
+    .phrase>span:last-child {
+        font-size: 18px;
+    }
+
+    .boutons {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    .boutons>* {
+        width: 100%;
+        max-width: 240px;
+        max-height: 46px;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero_banner h2 {
+        margin-bottom: 100px;
+    }
+
+    .boutons {
+
+        margin-top: 100px;
+    }
 }

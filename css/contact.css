@@ -7,7 +7,7 @@
     border-radius: 24px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 
+    box-shadow:
         0 30px 80px rgba(0, 0, 0, 0.6),
         inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
@@ -71,13 +71,13 @@ form {
     cursor: pointer;
     color: white;
     transition: all 0.4s ease;
-    box-shadow: 
-        0 15px 40px rgba(107, 105, 232, 0.45);    
+    box-shadow:
+        0 15px 40px rgba(107, 105, 232, 0.45);
 }
 
 .formulaire button:hover {
     transform: translateY(-4.5px);
-    box-shadow: 
+    box-shadow:
         0 20px 50px black;
 }
 
@@ -90,7 +90,7 @@ form {
     border-radius: 24px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 
+    box-shadow:
         0 30px 80px rgba(0, 0, 0, 0.6),
         inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
@@ -153,13 +153,66 @@ form {
     letter-spacing: 0.5px;
     cursor: pointer;
     color: white;
-    transition: all 0.4s ease;
-    box-shadow: 
-        0 15px 40px rgba(107, 105, 232, 0.45);    
+    transition: transform .4s ease;
+    box-shadow:
+        0 15px 40px rgba(107, 105, 232, 0.45);
 }
 
 .formulaire button:hover {
-    transform: translateY(-4.5px);
-    box-shadow: 
+    transform: translateY(-4px);
+    box-shadow:
         0 20px 50px black;
+}
+
+.formulaire button:active {
+    transform: scale(.985);
+}
+
+@media (max-width: 768px) {
+    #contact {
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+
+    .formulaire {
+        padding: 40px 24px 36px;
+        margin: 0 20px;
+        border-radius: 18px;
+    }
+
+    form {
+        gap: 20px;
+    }
+
+    .formulaire input,
+    .formulaire textarea {
+        font-size: 14px;
+        padding: 14px 16px;
+    }
+
+    .formulaire textarea {
+        height: 150px;
+    }
+
+    .formulaire label {
+        font-size: 12px;
+        letter-spacing: 0.8px;
+    }
+
+    .formulaire button {
+        font-size: 14px;
+        width: 100%;
+        padding: 16px !important;
+    }
+
+    .formulaire .boutons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .formulaire {
+        padding: 32px 18px 28px;
+        margin: 0 14px;
+    }
 }

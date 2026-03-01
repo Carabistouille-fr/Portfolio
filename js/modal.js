@@ -4,11 +4,10 @@ const closeModal = document.querySelector(".close_modal");
 const nextBtn = document.querySelector(".modal_btn.next");
 const prevBtn = document.querySelector(".modal_btn.prev");
 const counter = document.querySelector(".modal_counter");
+const imageCaption = document.querySelector(".modal_caption");
 
 let currentIndex = 0;
 let images = [];
-
-// OUVERTURE MODAL
 
 document.querySelectorAll(".open_modal").forEach((bloc) => {
     bloc.addEventListener("click", () => {
@@ -31,12 +30,12 @@ document.querySelectorAll(".open_modal").forEach((bloc) => {
             img.src = data.src;
             img.style.width = "100%";
 
-            const title = document.createElement("div");
-            title.textContent = data.title;
-            title.classList.add("modal_image_title");
+            const titleEl = document.createElement("div");
+            titleEl.textContent = data.title;
+            titleEl.classList.add("modal_image_title");
 
             wrapper.appendChild(img);
-            wrapper.appendChild(title);
+            wrapper.appendChild(titleEl);
             modalTrack.appendChild(wrapper);
         });
 
@@ -46,17 +45,17 @@ document.querySelectorAll(".open_modal").forEach((bloc) => {
     });
 });
 
-// FONCTION SLIDE
-
 function updateSlide() {
     modalTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
 
     if (counter) {
         counter.textContent = `${currentIndex + 1} / ${images.length}`;
     }
-}
 
-// BOUTONS
+    if (imageCaption) {
+        imageCaption.textContent = images[currentIndex]?.title || "";
+    }
+}
 
 nextBtn.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % images.length;
@@ -67,8 +66,6 @@ prevBtn.addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     updateSlide();
 });
-
-// FERMETURE
 
 function close() {
     modal.classList.remove("active");
@@ -104,8 +101,6 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
-// ADAPTATION POUR APPAREILS TACTILES
-
 let startX = 0;
 let endX = 0;
 
@@ -126,7 +121,6 @@ modalTrack.addEventListener("touchend", () => {
         } else {
             currentIndex = (currentIndex - 1 + images.length) % images.length;
         }
-
         updateSlide();
     }
 });
