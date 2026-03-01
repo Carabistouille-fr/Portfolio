@@ -57,7 +57,6 @@ body::selection {
 .trait_footer {
     height: 2px;
     width: 60%;
-    min-width: 400px;
     margin: 0 auto;
     background: var(--blanc_gris);
     margin-bottom: 40px;
