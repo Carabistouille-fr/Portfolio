@@ -109,6 +109,10 @@
     flex-wrap: nowrap;
 }
 
+.slider span {
+    font-size: 19.5px
+}
+
 .slider {
     height: 1.2em;
     overflow: hidden;
@@ -172,6 +176,10 @@
         margin: 0 10px;
     }
 
+    .slider span {
+        font-size: 18px
+    }
+
     .boutons {
         font-size: 18px;
         margin-top: 38px;
@@ -194,7 +202,8 @@
 
     .fleche_descendre {
         font-size: 24px;
-        bottom: 80px;
+        left: 40px;
+        margin-bottom: -55px;
     }
 }
 
@@ -232,6 +241,10 @@
 
     .fleche_descendre {
         bottom: 90px;
+    }
+
+    .slider span {
+        font-size: 17px
     }
 }
 
