@@ -317,11 +317,16 @@
     .modal_track img {
         max-height: 60vh;
     }
+
+    .bloc_image p {
+        font-size: 14px;
+        margin: 30px;
+    }
 }
 
 @media (max-width: 480px) {
     .bloc_image p {
-        font-size: 13px;
+        font-size: 14px;
         margin: 20px;
     }
 }
