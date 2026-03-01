@@ -208,6 +208,10 @@
 }
 
 @media (max-width: 750px) {
+    .hero_banner {
+        height: calc(100vh - 70px);
+    }
+
     .hero_banner h2 {
         font-size: 38px;
     }

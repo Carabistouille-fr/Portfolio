@@ -29,7 +29,11 @@ document.querySelectorAll(".open_modal").forEach((bloc) => {
         images.forEach((data) => {
             const wrapper = document.createElement("div");
             wrapper.style.position = "relative";
-            wrapper.style.minWidth = "100%";
+            wrapper.style.width = "100%";  // minWidth
+            wrapper.style.flexShrink = "0";
+            wrapper.style.display = "flex";
+            wrapper.style.justifyContent = "center";
+            wrapper.style.alignItems = "center";
 
             const isVideo = /\.(mp4|webm|ogg)$/i.test(data.src);
             let media;
