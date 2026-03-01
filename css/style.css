@@ -62,9 +62,11 @@ body::selection {
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
     font-size: 12px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 }
 
 footer a {
@@ -72,4 +74,5 @@ footer a {
     font-style: italic;
     text-decoration: none;
     color: var(--blanc);
+    margin-bottom: 20px;
 }
