@@ -201,7 +201,7 @@
 
     .fleche_descendre {
         font-size: 24px;
-        left: 30px;
+        left: 20px;
         margin-bottom: -12px;
     }
 }
@@ -209,7 +209,7 @@
 @media (max-width: 750px) {
     .hero_banner {
         height: calc(100vh - 70px);
-        margin-top: 70px;
+        margin-top: 40x;
     }
 
     .hero_banner h2 {

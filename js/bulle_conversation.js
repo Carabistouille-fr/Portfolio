@@ -1,4 +1,4 @@
-const PROFILE_PHOTO = "../assets/pp/pp_head.png";
+const PROFILE_PHOTO = "../assets/pp/pp_head.jpg";
 const PROFILE_INITIAL = "A";
 const PROFILE_NAME = "Léo · Dev &amp; Designer";
 const PROFILE_STATUS = "Disponible pour de nouveaux projets";
@@ -36,13 +36,14 @@ const QA = [
     },
 ];
 
-// ══════════════════════════════════════════
 let chatOpen = false;
 let initialized = false;
 
 if (PROFILE_PHOTO) {
     const av = document.getElementById("avatarEl");
-    av.innerHTML = `<img src="${PROFILE_PHOTO}" alt="Photo de profil">`;
+    av.innerHTML = `<img src="${PROFILE_PHOTO}" alt="Photo de profil" style="
+                                object-position: 100% 40%;
+                            ">`;
 } else {
     document.getElementById("avatarEl").textContent = PROFILE_INITIAL;
 }
