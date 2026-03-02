@@ -70,7 +70,7 @@
 
 .fleche_descendre {
     position: absolute;
-    bottom: 50px;
+    bottom: 35px;
     font-size: 36px;
     animation: fleche_anim 1.5s infinite ease-in-out;
 }
@@ -209,7 +209,7 @@
 @media (max-width: 750px) {
     .hero_banner {
         height: calc(100vh - 70px);
-        margin-top: 40x;
+        margin-top: 40px;
     }
 
     .hero_banner h2 {
