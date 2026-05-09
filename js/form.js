@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     const textarea = document.querySelector("textarea");
     const formulaire_key = document.querySelector("#formulaire_contact");
 
@@ -31,7 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
         })
             .then((response) => {
                 if (response.ok) {
-                    if (status) status.innerHTML = "Thanks for your submission!";
+                    if (status)
+                        status.innerHTML =
+                            "Merci pour l'envoi du formulaire, je vous réponds sous peu !";
                     form.reset();
                 } else {
                     response.json().then((data) => {
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     .join(", ");
                             } else {
                                 status.innerHTML =
-                                    "Oops! There was a problem submitting your form";
+                                    "Il y a eu un problème avec l'envoi du formulaire.. essayer de me contacter par mail si ça ne fonctionne pas.. je règle ce problème au plus vite.";
                             }
                         }
                     });
@@ -52,11 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 const status = document.getElementById("my-form-status");
                 if (status) {
                     status.innerHTML =
-                        "Oops! There was a problem submitting your form";
+                        "Il y a eu un problème avec l'envoi du formulaire.. essayer de me contacter par mail si ça ne fonctionne pas.. je règle ce problème au plus vite.";
                 }
             });
     }
 
     form.addEventListener("submit", handleSubmit);
-
 });

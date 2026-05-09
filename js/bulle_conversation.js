@@ -1,5 +1,5 @@
 const PROFILE_PHOTO = "../assets/pp/pp_head.jpg";
-const PROFILE_INITIAL = "A";
+const PROFILE_INITIAL = "L";
 const PROFILE_NAME = "Léo · Dev &amp; Designer";
 const PROFILE_STATUS = "Disponible pour de nouveaux projets";
 
@@ -82,7 +82,7 @@ function renderQuestions() {
 function askQuestion(index) {
     const item = QA[index];
     addUser(item.q);
-    // Typing indicator
+
     const typingEl = addTyping();
     setTimeout(() => {
         typingEl.remove();

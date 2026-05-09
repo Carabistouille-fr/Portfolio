@@ -60,6 +60,7 @@ body::selection {
     margin: 0 auto;
     background: var(--blanc_gris);
     margin-bottom: 40px;
+    margin-top: 25px;
 }
 
 footer {
