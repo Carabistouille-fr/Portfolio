@@ -242,6 +242,7 @@
     color: var(--blanc);
     border: 1px solid var(--bordure_chat);
     border-bottom-left-radius: 4px;
+    margin-bottom: 10px;
 }
 
 .msg.ai .bubble strong {

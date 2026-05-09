@@ -7,10 +7,14 @@ const counter = document.querySelector(".modal_counter");
 const imageCaption = document.querySelector(".modal_caption");
 
 let currentIndex = 0;
+let currentProjectIndex = 0;
 let images = [];
 
-document.querySelectorAll(".open_modal").forEach((bloc) => {
+document.querySelectorAll(".open_modal").forEach((bloc, index) => {
     bloc.addEventListener("click", () => {
+        currentProjectIndex = index;
+        modal.classList.remove("projet_clair");
+        
         images = bloc.dataset.images
             .split(",")
             .map((item) => item.trim())
@@ -26,10 +30,11 @@ document.querySelectorAll(".open_modal").forEach((bloc) => {
 
         modalTrack.innerHTML = "";
         currentIndex = 0;
+
         images.forEach((data) => {
             const wrapper = document.createElement("div");
             wrapper.style.position = "relative";
-            wrapper.style.width = "100%";  // minWidth
+            wrapper.style.width = "100%";
             wrapper.style.flexShrink = "0";
             wrapper.style.display = "flex";
             wrapper.style.justifyContent = "center";
@@ -63,6 +68,12 @@ document.querySelectorAll(".open_modal").forEach((bloc) => {
             modalTrack.appendChild(wrapper);
         });
 
+        if (currentProjectIndex === 0) {
+            modal.classList.add("projet_clair");
+        } else {
+            modal.classList.remove("first-projet_clair");
+        }
+
         updateSlide();
         modal.classList.add("active");
         document.body.style.overflow = "hidden";
@@ -92,25 +103,25 @@ prevBtn.addEventListener("click", () => {
     updateSlide();
 });
 
-function close() {
+function closeModalFn() {
     modalTrack.querySelectorAll("video").forEach((v) => {
         v.pause();
         v.currentTime = 0;
     });
 
     modal.classList.remove("active");
-    modal.classList.remove("active");
     modal.classList.add("closing");
     document.body.style.overflow = "";
+
     setTimeout(() => {
         modal.classList.remove("closing");
     }, 300);
 }
 
-closeModal.addEventListener("click", close);
+closeModal.addEventListener("click", closeModalFn);
 
 modal.addEventListener("click", (e) => {
-    if (e.target === modal) close();
+    if (e.target === modal) closeModalFn();
 });
 
 document.addEventListener("keydown", (e) => {
@@ -118,7 +129,7 @@ document.addEventListener("keydown", (e) => {
 
     if (e.key === "Escape" || e.key === " ") {
         e.preventDefault();
-        close();
+        closeModalFn();
     }
 
     if (e.key === "ArrowRight") {
