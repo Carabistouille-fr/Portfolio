@@ -145,9 +145,9 @@
         margin-top: 20px;
     }
 
-    .presentation p:not(:last-child) {
+    /* .presentation p:not(:last-child) {
         margin-bottom: 15px;
-    }
+    } */
 
     .bloc_droite_skills {
         margin-top: 60px;

@@ -1,4 +1,4 @@
-const PROFILE_PHOTO = "./assets/pp/pp_head.jpg";
+const PROFILE_PHOTO = "./assets/pp/pp.png";
 const PROFILE_INITIAL = "L";
 const PROFILE_NAME = "Léo · Dev & Designer";
 const PROFILE_STATUS = "Disponible pour de nouveaux projets";

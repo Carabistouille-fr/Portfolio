@@ -1,5 +1,5 @@
 .hero_banner {
-    border: red 3px solid;
+    border: green 3px solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -298,7 +298,7 @@
 
 @media (max-width: 340px) {
     .hero_banner h2 {
-        margin-top: -50px;
+        margin-top: -10px;
     }
 
     .phrase {
