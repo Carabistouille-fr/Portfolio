@@ -22,7 +22,7 @@
     height: 275px;
     width: 525px;
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
     z-index: -1;
     transition: all .25s ease-out;
 }
@@ -254,6 +254,12 @@
     flex: 1;
 }
 
+@media (max-width: 1024px) {
+    .bloc_projet a {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 768px) {
     .projets {
         gap: 50px;
@@ -269,6 +275,10 @@
     .bloc_projet h5 {
         font-size: 17px;
         margin-top: 12px;
+    }
+
+    .bloc_projet a {
+        font-size: 15px;
     }
 
     .modal_image_title {
