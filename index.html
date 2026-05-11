@@ -25,10 +25,13 @@
             href="./assets/pp/pp.png"
         />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+        />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -244,6 +247,75 @@
             </div>
 
             <div class="projets">
+                <style>
+                    .projet_clair .description_au_survol p {
+                        color: black;
+                    }
+
+                    .projet_clair .modal_btn {
+                        background: rgb(44, 42, 42);
+                    }
+
+                    .projet_clair .modal_btn:hover {
+                        background: black;
+                    }
+                </style>
+
+                <div class="bloc_projet reveal">
+                    <div class="bloc_image description_au_survol">
+                        <div class="fond_image">
+                            <img
+                                src="./assets/web_portfolio/home.png"
+                                alt="Portfolio web"
+                            />
+                        </div>
+
+                        <p>
+                            J'ai développé récemment ce site web 'Portfolio'
+                            afin de me présenter, tout en montrant ma capacité à
+                            créer un site web moderne et fiable.
+                        </p>
+                    </div>
+
+                    <h5>Ce site web évidement !</h5>
+                    <p>Création web - Portfolio</p>
+                    <a href="#home">Pas vraiment besoin d'image :)</a>
+                </div>
+                <div class="bloc_projet reveal">
+                    <div class="bloc_image description_au_survol">
+                        <div class="fond_image">
+                            <img class="black"
+                                src="./assets/python_project/presentation_queens_game.png"
+                                alt="Jeu de Dames"
+                                style="background-color: black;"
+                            />
+                        </div>
+
+                        <p>
+                            J'ai développé en Python un jeu de Dames, qui inclue
+                            asboluement toutes les règles du jeu. Je l'ai
+                            d'abord codé sans interface graphique, donc en ligne
+                            de commande, puis j'ai ajouté l'interface que l'on
+                            voit ici.
+                        </p>
+                    </div>
+
+                    <h5>Jeu de Dames</h5>
+                    <p>Projet programmation jeu vidéo</p>
+                    <a
+                        class="open_modal"
+                        data-images="./assets/python_project/presentation_queens_game.png|Plateau de jeu avant de commencer une partie (+ on voit infos autour),
+                    ./assets/python_project/moves.png|Le joueur voit les déplacements possibles au clic de la pièce,
+                              ./assets/python_project/forced_to_take.png|Le joueur est forcé à prendre la pièce adverse; c'est la règle !,
+                              ./assets/python_project/multiple_take.png|Le joueur peut prendre plusieurs pièces en 1 tour,
+                              ./assets/python_project/queen.png|Le joueur peut obtenir une dame en allant sur la dernière rangée,
+                              ./assets/python_project/queen's_moves.png|La dame est plutôt libre dans ses déplacements,
+                              ./assets/python_project/moves_during_multiple_holds.png|Le joueur peut prendre une pièce adverse avec sa dame,
+                              ./assets/python_project/victory.png|Le joueur noir a gagné !,
+                              ./assets/python_project/draw.png|En 16 coups d'affilé; personne n'a prit une pièce; donc égalité !"
+                        >Voir plus d'images</a
+                    >
+                </div>
                 <div class="bloc_projet reveal projet_clair">
                     <div class="bloc_image description_au_survol">
                         <div class="fond_image">
@@ -272,60 +344,13 @@
                         >Voir plus d'images
                     </a>
                 </div>
-                <style>
-                    .projet_clair .description_au_survol p {
-                        color: black;
-                    }
-
-                    .projet_clair .modal_btn {
-                        background: rgb(44, 42, 42);
-                    }
-
-                    .projet_clair .modal_btn:hover {
-                        background: black;
-                    }
-                </style>
-
-                <div class="bloc_projet reveal">
-                    <div class="bloc_image description_au_survol">
-                        <div class="fond_image">
-                            <img
-                                src="./assets/python_project/presentation_queens_game.png"
-                                alt="Jeu de Dames"
-                            />
-                        </div>
-
-                        <p>
-                            J'ai développé en Python un jeu de Dames, qui inclue
-                            asboluement toutes les règles du jeu. Je l'ai
-                            d'abord codé sans interface graphique, donc en ligne
-                            de commande, puis j'ai ajouté l'interface que l'on
-                            voit ici.
-                        </p>
-                    </div>
-
-                    <h5>Jeu de Dames</h5>
-                    <p>Projet programmation jeu vidéo</p>
-                    <a
-                        class="open_modal"
-                        data-images="./assets/python_project/presentation_queens_game.png|Plateau de jeu avant de commencer une partie (+ on voit infos autour),
-                              ./assets/python_project/moves.png|Le joueur voit les déplacements possibles au clic de la pièce,
-                              ./assets/python_project/forced_to_take.png|Le joueur est forcé à prendre la pièce adverse; c'est la règle !,
-                              ./assets/python_project/multiple_take.png|Le joueur peut prendre plusieurs pièces en 1 tour,
-                              ./assets/python_project/queen.png|Le joueur peut obtenir une dame en allant sur la dernière rangée,
-                              ./assets/python_project/queen's_moves.png|La dame est plutôt libre dans ses déplacements,
-                              ./assets/python_project/moves_during_multiple_holds.png|Le joueur peut prendre une pièce adverse avec sa dame,
-                              ./assets/python_project/victory.png|Le joueur noir a gagné !,
-                              ./assets/python_project/draw.png|En 16 coups d'affilé; personne n'a prit une pièce; donc égalité !"
-                        >Voir plus d'images</a
-                    >
-                </div>
                 <div class="bloc_projet reveal">
                     <div class="bloc_image description_au_survol">
                         <div class="fond_image">
                             <img
                                 src="./assets/car_project/car_presentation.jpg"
                                 alt=""
+                                style="object-fit: fill;"
                             />
                         </div>
 
