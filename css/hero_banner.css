@@ -110,7 +110,7 @@
 }
 
 .slider span {
-    font-size: 19.5px
+    font-size: 18.5px
 }
 
 .slider {
@@ -176,7 +176,7 @@
     }
 
     .slider span {
-        font-size: 18px
+        font-size: 17.5px
     }
 
     .boutons {
@@ -210,8 +210,7 @@
 
 @media (max-width: 750px) {
     .hero_banner {
-        height: calc(100vh - 70px);
-        margin-top: 40px;
+        border: red 3px solid;
     }
 
     .hero_banner h2 {
@@ -247,7 +246,7 @@
     }
 
     .slider span {
-        font-size: 17px
+        font-size: 16.5px
     }
 }
 
