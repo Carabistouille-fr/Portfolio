@@ -209,9 +209,9 @@
 }
 
 @media (max-width: 750px) {
-    .hero_banner {
+    /* .hero_banner {
         border: red 3px solid;
-    }
+    } */
 
     .hero_banner h2 {
         font-size: 38px;
