@@ -31,7 +31,7 @@ const QA = [
     },
     {
         icon: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`,
-        q: "Comment vous contacter ?",
+        q: "Comment te contacter ?",
         a: "Vous pouvez me contacter via le <strong>formulaire</strong> en bas du site ou directement par email à <a href='mailto:leomagnien07@gmail.com'>leomagnien07@gmail.com</a>. Je réponds généralement <strong>sous 24h</strong>.",
     },
 ];

@@ -13,8 +13,7 @@ let images = [];
 document.querySelectorAll(".open_modal").forEach((bloc, index) => {
     bloc.addEventListener("click", () => {
         currentProjectIndex = index;
-        modal.classList.remove("projet_clair");
-        
+                
         images = bloc.dataset.images
             .split(",")
             .map((item) => item.trim())
@@ -68,10 +67,10 @@ document.querySelectorAll(".open_modal").forEach((bloc, index) => {
             modalTrack.appendChild(wrapper);
         });
 
-        if (currentProjectIndex === 0) {
-            modal.classList.add("projet_clair");
+        if (currentProjectIndex === 1) {
+            modal.classList.add("dark_btns");
         } else {
-            modal.classList.remove("first-projet_clair");
+            modal.classList.remove("dark_btns");
         }
 
         updateSlide();
